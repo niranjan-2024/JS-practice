@@ -44,3 +44,28 @@ console.log(typeof myFunction);
 console.log(typeof heros);
 
 
+// memories
+
+//Stack,heap
+//stack -> primitive -> copy
+//heap -> non-primitive -> reference
+
+let myYt = "nametoo";
+let another = myYt;
+another = "dododod"
+console.log(another);
+console.log(myYt);
+
+
+
+//here heap memory reference of change in user 2 change in user 1 too dur to heap memory
+let user1 = {
+    email: "user@google.com",
+    upi: "abc@ybi"
+}
+
+let user2 = user1;
+user2.email = "user2@gmali.com";
+
+console.log(user1);
+
