@@ -51,9 +51,20 @@ console.log(Object.entries(tinderUser)); //gives key value pairs
 console.log(tinderUser.hasOwnProperty("isLoggedIn")); //gives true or false
 
 
+//destructuring
+const course = {
+    coursename: "js in hindi",
+    price:"999",
+    courseInstructor:"hitesh"
+}
 
+const {courseInstructor:instructor} = course //originalname of object property : our own name assigned
+// console.log(courseInstructor);
+console.log(instructor);
 
-
-
-
+// {
+//     "name":"jitesh",
+//     "coursename":"js in hindi",
+//     "price":"free"
+// }
 
