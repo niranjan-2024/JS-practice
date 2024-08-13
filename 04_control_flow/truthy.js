@@ -42,6 +42,14 @@ console.log(val1);
 //assign first value rether than null or undefined
 
 
+//ternary operator
+//condition ? true:false;
+const iceTeaPrice = 1;
+iceTeaPrice >= 80 ? console.log("more than 80") : console.log("less than 80");
+
+
+
+
 
 
 
