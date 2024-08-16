@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom CHAI or code</title>
+</head>
+<body style = "background-color:#212121; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thurshday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    console.log(parent);
+    console.log(parent.children); //gives html collection
+    // console.log(parent.children[1].innerHTML);
+    
+    for(let i=0;i<parent.children.length;i++){
+        console.log(parent.children[i].innerHTML);
+    }
+    
+    parent.children[1].style.color = "orange";
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+
+    const day1 = document.querySelector('.day');
+    console.log(day1);
+    console.log(day1.parentElement);
+    console.log(day1.nextElementSibling);
+    console.log("NODES: ",parent.childNodes);
+    
+    
+</script>
+</html>
+<!-- 
+document.getElementById('title').setAttribute('class','test');  -> this will always overwrite and returns null but set attribute of class
+in html dom manipulation we get class by className
+
+textContent vs innerText vs innerHTML
+textContent -> gives all text content written in file whetehr some is hide too
+innertext -> gives only that text that is visible only web page
+innerHTML -> gives all content which contains html syntax too
+
+document.getElementsByClassName('heading')  -> gives HTML collection
+
+document.querySelector()  -> is very important gives first query -> can be get by any .class, #id, or tag name  h2
+can be specific too
+document.querySelector('input[type = password]')
+
+check prototype always for functions and properties defined
+
+nodelist can be converted into array but not use map or something like array use forEach each time
+
+HTML collection -> we will get by getElementsByClassName is different from node list which we get by queery selectors
+
+Array.from(tempClassList); 
+
+myConvArr.forEach((li) => {
+    li.style.color = 'orange'
+});
+
+node list -> by query selector all -> forEach loop
+Html collection -> get elements by class name -> convert to  array by Array.from() -> then any array methods
+
+line break is also a text node elements
+-->
