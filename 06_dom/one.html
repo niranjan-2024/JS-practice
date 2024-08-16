@@ -1,0 +1,56 @@
+<!DOCTYPE html> <!--//tells html 5 only -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Dom Learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM learning on  Github <span style="display: none;">test text</span></h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <h2>Lorem, ipsum dolor.</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+
+    </div>
+</body>
+</html>
+
+<!-- DOM and events are main feature in javaScript
+
+DOM -> Document Object Model
+
+console.log(window) -> getting obsereve window object in inspect console in dev tools
+window.document   -> can also get access like this too -> 
+console.log(document)
+console.dir(document) -> getting extra information
+
+window -> document -> html -> 2 -> Head,Body
+								Head -> title, meta (can have more child) 
+									title -> text node
+									meta -> attribute
+								Body -> div -> attribute -> h1 -> textNode
+								etc.
+								
+console.log(document.baseURI) -> getting url or the page opened
+
+console.log(document.links) -> it gives a html collenction of links associsated
+
+selectors 
+
+document.getElementById('give id');  -> select node with that id   -> selection
+
+document.getElementById('firstHeading').innerHTML = "<h1>Chai or Code</h1>" -> manipulation -->
