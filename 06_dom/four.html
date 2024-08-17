@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body style = "background-color:#212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+    //here the full traversing is done
+    //add elements
+    function addLanguage(langName){
+        const listItem = document.createElement('li');  //create listItem;
+        listItem.innerHTML = `${langName}`; //add li data
+         
+        const unorderedList = document.querySelector('.language');  //select unordered list
+        unorderedList.appendChild(listItem); //add append list item to unordered list
+    }
+    addLanguage("mongoDb"); 
+    addLanguage("Typescript");
+
+    //Optimize approach -> does node traverse the full tree  -> focus on append child not on innerHTML
+    function addOptimize(langName){
+        const listItem = document.createElement('li');
+        listItem.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(listItem);
+    }
+    addOptimize('Golang');
+
+    //Edit elements;
+    const secondLang = document.querySelector("li:nth-child(2)") //selecting second
+    // secondLang.innerHTML = "mojo";     not optimize
+    const newLi = document.createElement('li');
+    newLi.textContent = "Mojo";
+    secondLang.replaceWith(newLi);
+
+    const firstLang = document.querySelector("li:nth-child(1)");
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    //remove elements
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove();
+</script>
+
+</html>
