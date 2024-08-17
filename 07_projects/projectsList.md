@@ -39,4 +39,14 @@ form.addEventListener('submit', (e) => {
 });
 ```
 
-## project 3 -> 
+## project 3 -> Digital clock
+```javascript
+const clock = document.getElementById('clock');
+
+setInterval(()=>{
+  let date = new Date();
+  clock.innerHTML = date.toLocaleTimeString();
+},1000);
+```
+
+## project 4 -> 
