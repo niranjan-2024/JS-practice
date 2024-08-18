@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript </title>
+</head>
+<body>
+    <h1>chai</h1>
+    <button id="stop">stop</button>
+    <button id="start">start</button>
+
+</body>
+<script>
+   setInterval(() => {
+    console.log(Date.now());
+   },100000000000);
+
+   const sayHi = (str) => {
+    console.log(str);
+   }
+
+   const interval = setInterval(sayHi,2000,"hi");
+   clearInterval(interval);
+    
+</script>
+</html>
