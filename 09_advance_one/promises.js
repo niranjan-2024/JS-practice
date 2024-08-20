@@ -129,3 +129,18 @@ fetch('https://api.github.com/users/niranjan-2024')
 })
 .catch((err) => console.log(err));
 
+/*
+fetch come to node js in 2022 only
+why fetch api not included in nodejs -> fetch api is highly dependent on web api and abort controller
+then they include all core apis in node js
+fetch does fetching from network returns a promise
+when we get error code eg 404 then its a response resolve because they specified error codes only not the error
+fetch also had options object
+fetch made a special priority queue (micro task queue , fast queue) in event loop of javascript thats why it executes faster  
+web browser / native node
+fetch -> two things -> one for data , on fullfillment array, on rejction array -> some relation with promise
+					-> other for web network request -> handle apis  ->  network requests give errors 
+initially data is empty
+these array have function and affects data
+this data is reponsible for global data response
+*/
