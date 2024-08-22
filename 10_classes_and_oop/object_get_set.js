@@ -14,3 +14,4 @@ const User = {
 
 const tea = Object.create(User);//user reference //factory function
 console.log(tea.email);
+console.log(tea._email);
