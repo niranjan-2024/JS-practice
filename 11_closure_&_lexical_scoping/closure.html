@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+<script>
+    //lexical scoping
+
+    // function init() {
+    //     let name = "Mozilla"; 
+    //     function displayName() {
+    //         console.log(name); 
+    //     }
+    //     displayName();
+    // }
+
+    // init();
+
+    function outer(){
+        let username = "jitesh";
+        // console.log(secret);  it is also not accessed here
+        
+        function inner(){
+            let secret = "my";
+            console.log("inner"+username);
+        }
+        function inner2(){
+            // console.log(secret);  //not shared between child
+            console.log("inner2"+username);
+        }
+
+        inner();
+        inner2();
+    }
+    outer();
+    // console.log("Too outer"+username);
+
+
+
+    //Closures
+    function makeFunc(){
+        const name = "mozilla";
+        function displayName(){
+            console.log(name);
+        }
+        return displayName;
+    }
+    const myFunc = makeFunc();
+    myFunc();
+    //when return function reference not only function returns but its lexical scope also so it can get whole lexical scope of 
+    // the function, okay now understand by lexical scope and checking the control flow
+    // myfunc is only displayName but with lexical scope of oute and name so its is a clouser
+</script>
+<script>
+
+    //practical application of closure with the help of lexical scoping
+
+
+        // document.getElementById("orange").onclick = () => {
+        //     document.body.style.backgroundColor = `orange`
+        // }
+        // document.getElementById("green").onclick = () => {
+        //     document.body.style.backgroundColor = `green`
+        // }
+
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`
+
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange");
+        document.getElementById('green').onclick = clickHandler("green");
+</script>
+</html>
